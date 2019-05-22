@@ -1,0 +1,241 @@
+/* Variables / Mixins
+--------------------------*/
+@font-face {
+  font-family: 'Zefani';
+  src: url('../media/fonts/zefani.woff2') format('woff2'), url('../media/fonts/zefani.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Otama';
+  src: url('../media/fonts/otama-ep.woff2') format('woff2'), url('../media/fonts/otama-ep.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+p {
+  margin: 0 0 1em;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 80%;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+[hidden] {
+  display: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Open Sans ExtraBold Italic'), local('OpenSans-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/opensans/v16/memnYaGs126MiZpBA-UFUKW-U9hrIqY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
+::-moz-selection {
+  background: #ff6347;
+  color: #fff;
+}
+::selection {
+  background: #ff6347;
+  color: #fff;
+}
+body {
+  --main-bg-color: #fafafa;
+  --main-text-color: #333;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  font: 400 1em/1.5 'Open Sans', Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+main a {
+  color: #000;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+main a:before,
+main a:after {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+}
+main a:before {
+  border-bottom: 1px solid #ff6347;
+  left: -0.125em;
+  top: 100%;
+  transition: 0.1s;
+  width: calc(100% + 0.25em);
+}
+main a:after {
+  height: 1.5em;
+  display: block;
+  left: -0.25em;
+  top: 0;
+  transition: 0.4s;
+  width: 0px;
+  -webkit-clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+  clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+}
+main a:hover {
+  color: #fff;
+}
+main a:hover:before {
+  left: -0.25em;
+}
+main a:hover:after {
+  background: rgba(255, 99, 71, 0.75);
+  opacity: 1;
+  width: calc(100% + 0.5em);
+}
+section {
+  min-height: 100vh;
+  padding: 4vw 4vw 16vw;
+}
+section header {
+  text-align: center;
+}
+section header .heading {
+  font: 5vw/1 'Otama', 'Bodoni', serif;
+}
+section header .subheading {
+  font: 400 1vw/1rem 'Open Sans', Helvetica, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+section header .subheading:before,
+section header .subheading:after {
+  border-top: 1px solid var(--main-text-color);
+  content: '';
+  display: inline-block;
+  margin: 0 1em 0.25em;
+  width: 3vw;
+}
+p:last-child {
+  margin: 0;
+}
+footer p {
+  text-align: center;
+}
+.t-center {
+  text-align: center;
+}
+.t-justify {
+  text-align: justify;
+}
+.t-justify p {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,39 @@
+{# Home template #}
+
+{% extends "templates/_layout.njk" %}
+{% set pageTitle = 'Midwest Dirt Legion' %}
+{% set description = '' %}
+{% set pageID = "home" %}
+
+{% block content %}
+	<div class="mission-statement t-center">
+		<h2>Building a better community for <em>Cisgender women, Gender Non-Conforming, and Transgender mountain bikers</em></h3>
+	</div>
+
+	<div class="long-description t-center">
+		<p>Our focus is on bringing passionate people and organizations in the Twin Cities together through meet-ups, group rides, and skills sessions.</p>
+		<p>Our long term goal is to provide a blueprint to create inclusive and accessible events and communities.</p>
+	</div>
+
+	<hr>
+
+	<div class="founders">
+		<h3>Founders of Midwest Dirt Legion</h3>
+		<ul>
+			<li class="founder">
+				<figure class="founder-portrait">
+					<img src="assets/media/images/steph_aich.jpg" alt="Steph Aich, she/her">
+				</figure>
+				<h4 class="founder-name">Steph Aich</h4>
+				<h5 class="founder-pronoun">She/Her</h5>
+			</li>
+			<li class="founder">
+				<figure class="founder-portrait">
+					<img src="assets/media/images/ash_murray.jpg" alt="Ash Murray, they/them">
+				</figure>
+				<h4 class="founder-name">Ash Murray</h4>
+				<h5 class="founder-pronoun">They/Them</h5>
+			</li>
+		</ul>
+	</div>
+{% endblock %}

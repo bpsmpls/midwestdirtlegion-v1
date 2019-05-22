@@ -1,0 +1,31 @@
+<!-- Breadcrumb -->
+{% macro breadcrumbs(trail) %}
+    <ul class="hList mix-hList_breadcrumb u-textFontSizeMedium">
+        {% for crumb in trail %}
+            {% if not loop.last %}
+                <li><a href="#0">{{ crumb }}</a></li>
+            {% else %}
+                <li>
+                    <span class="u-textColorLight">{{ crumb }}</span>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul> <!-- /.hList -->
+{% endmacro %}
+
+<!-- Icon -->
+{% macro icon(iconName, classes) %}
+    <div class="{% if classes %} {{ classes }}{% endif %}">
+        <svg class="icon-inner" version="1.1" preserveAspectRatio="xMidYMid meet" role="img">
+            <use xlink:href="#icon-{{ iconName }}"></use>
+        </svg>
+    </div>
+{% endmacro %}
+
+<!-- Section Headings -->
+{% macro heading(heading, subheading) %}
+<header>
+    <h3 class="subheading">{{ subheading }}</h3>
+    <h2 class="heading">{{ heading }}</h2>
+</header>
+{% endmacro %}

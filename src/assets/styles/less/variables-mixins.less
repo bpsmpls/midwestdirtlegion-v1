@@ -1,0 +1,144 @@
+/* Variables / Mixins
+--------------------------*/
+
+// Brand Colors
+// -------------------------
+// @brand-blue:        #0ba2c3;
+
+// Grays
+// -------------------------
+@black:		   #000;
+@gray-darker:  #222;
+@gray-dark:    #333;
+@gray:         #555;
+@gray-light:   #9a9a9a;
+@gray-lighter: #fafafa;
+@white:        #fff;
+
+@red:    rgb(255, 99, 71);
+@red-75: rgba(255, 99, 71, 0.75);
+
+@font-face {
+	font-family:'Zefani';
+	src:url('../media/fonts/zefani.woff2') format('woff2'),
+		url('../media/fonts/zefani.woff') format('woff');
+	font-style:normal;
+	font-weight:normal;
+}
+
+@font-face {
+	font-family:'Otama';
+	src:url('../media/fonts/otama-ep.woff2') format('woff2'),
+		url('../media/fonts/otama-ep.woff') format('woff');
+	font-style:normal;
+	font-weight:normal;
+}
+
+
+// Fonts / Text
+// -------------------------
+@font-family-serif:     'Otama', 'Bodoni', serif;
+@font-family-sans:      'Open Sans', Helvetica, sans-serif;
+@font-family-cond-sans: 'Open Sans Condensed', Impact, sans-serif;
+@font-size-base:         10px;
+@line-height-base:       20px;
+
+// Font Weights
+// -------------------------
+@font-weight-thin:     100;
+@font-weight-light:    300;
+@font-weight-regular:  400;
+@font-weight-bold:     700;
+@font-weight-black:    800;
+
+
+// Mixins
+// -----------------------
+
+// Responsive Video
+.flex_video(@class:wrap) {
+	figure.video {
+		margin-bottom:1em;
+		
+		.@{class} {
+			height:0;
+			padding-bottom:56.25%; /* 16:9 */
+			padding-top:25px;
+			position:relative;
+		}
+		iframe, object, embed, video {
+			height:100%;
+			left:0;
+			position:absolute;
+			top:0;
+			width:100%;
+		}
+	}
+}
+
+// Images
+.fill-max-width() {
+	display:block;
+	height:auto; 
+	max-width:100%; 
+}
+
+.fill-width() {
+	.fill-max-width();
+	width:100%; 
+}
+
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+#translucent {
+	.background(@color: @white, @alpha: 1) {
+		@forMS: @alpha*100;
+		background-color:@color;
+		background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+		filter: alpha(opacity=@forMS);
+	}
+	.border(@color: @white, @alpha: 1) {
+		border-color:@color;
+		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+		.background-clip(padding-box);
+	}
+}
+
+.clip-path(@clip) {
+	-webkit-clip-path:@clip;
+	clip-path:@clip;	
+}
+
+.text-hide() {
+	font: ~"0/0" a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Box sizing
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+	   -moz-box-sizing: @boxmodel;
+		    box-sizing: @boxmodel;
+}
+
+// Transforms
+.transform(@transform) {
+	-webkit-transform: @transform;
+	   -moz-transform: @transform;
+	     -o-transform: @transform;
+			transform: @transform;
+}
+
+// Transitions
+.transition(@transition) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+	     -o-transition: @transition;
+			transition: @transition;
+}

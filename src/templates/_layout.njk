@@ -1,0 +1,21 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+<head>
+    {% include "../templates/includes/shared/_head.njk" %}
+</head>
+<body>
+    <div id="page">
+        {% include "../templates/includes/shared/_masthead.njk" %}
+
+        <main id="{{ pageID }}">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        {% include "../templates/includes/shared/_footer.njk" %}
+    </div>
+
+    {% include "../templates/includes/scripts/_globalScripts.njk" %}
+    {% include "../templates/includes/scripts/_analytics.njk" %}
+</body>
+</html>
