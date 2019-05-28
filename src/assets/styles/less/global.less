@@ -1,13 +1,11 @@
 // Section:Global  
 // --------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800i');
-
-::-moz-selection { background:@red; color:@white; }
-::selection { background:@red; color:@white; }
+::-moz-selection { background:@brown; color:@white; }
+::selection { background:@brown; color:@white; }
 
 body {
-	--main-bg-color:@gray-lighter;
+	--main-bg-color:@tan;
 	--main-text-color:@gray-dark;
 	background:var(--main-bg-color);
 	color:var(--main-text-color);
@@ -18,92 +16,26 @@ a {
 	text-decoration:none;
 }
 
-main a {
-	color:@black;
-	display:inline-block;
-	position:relative;
-	text-decoration:none;
-	transition:0.3s;
-	transition-delay:0.1s;
-
-	&:before,
-	&:after {
-		content:' ';
-		position:absolute;
-		z-index:-1;
-	}
-
-	&:before {
-		border-bottom:1px solid @red;
-		left:-0.125em;
-		top:100%;
-		transition:0.1s;
-		width:calc(100% + 0.25em);
-	}
-	&:after {
-		height:1.5em;
-		display:block;
-		left:-0.25em;
-		top:0;
-		transition:0.4s;
-		width:0px;
-		.clip-path(polygon(2% 0, 100% 0, 98% 100%, 0 100%));
-	}
-	
-	&:hover{
-		color:@white;
-
-		&:before {
-			left:-0.25em;
-		}
-
-		&:after {
-			background:@red-75;
-			opacity:1;
-			width:calc(100% + 0.5em);
-		}
-	}
-}
-
-
-#page {
-	
-}
-
-section {
-	min-height:100vh;
-	padding:4vw 4vw 16vw;
-
-	header {
-		text-align:center;
-
-		.heading {
-			font:5vw/1 @font-family-serif;
-		}
-		.subheading {
-			font:@font-weight-regular 1vw/1rem @font-family-sans;
-			letter-spacing:0.2em;
-			text-transform:uppercase;
-
-			&:before,
-			&:after {
-				border-top:1px solid var(--main-text-color);
-				content:'';
-				display:inline-block;
-				//font:1.5em/1rem @font-family-serif;
-				margin:0 1em 0.25em;
-				width:3vw;
-			}
-		}
-	}
-}
-
 p:last-child {
 	margin:0;
 }
 
-footer {
-	p {
-		text-align:center;
+hr {
+	background:url('../media/images/tire.svg') center center no-repeat;
+	background-size:110%;
+	border:none;
+	height:9em;
+	margin:-4em auto 0em;
+	max-width:40em;
+	width:100%;
+
+	@media (min-width:42em) {
+		background:0;
+		border-top:2px solid #c8c5b6;
+		height:0;
+		margin-top:2em;
+		margin-bottom:3em;
 	}
 }
+
+#page {}

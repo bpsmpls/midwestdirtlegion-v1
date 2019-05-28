@@ -1,0 +1,42 @@
+// Founders
+.founders-wrap {
+	h3 {}
+}
+.founders-list {
+	display:flex;
+	justify-content:center;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.founder {
+	margin:0 4vw;
+	text-align:center;
+
+	figure {
+		border-radius:50%;
+		margin:0 0 1em;
+		max-width:10em;
+		overflow:hidden;
+
+		img {
+			display:block;
+			height:auto;
+			width:100%;
+		}
+	}
+	.founder-name {
+		font-size:1em;
+		font-weight:700;
+		line-height:1;
+		margin:0;
+	}
+	.founder-pronoun {
+		font-size:0.75em;
+		font-weight:400;
+	}
+
+	@media (min-width:40em) {
+		margin:0 2em;
+	}
+}

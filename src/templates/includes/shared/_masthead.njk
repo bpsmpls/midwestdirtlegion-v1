@@ -1,6 +1,18 @@
 <header id="masthead">
-    <a href="/" class="site-title">Midwest Dirt Legion</a>
-    <figure>
-        <img src="assets/media/images/banner.jpg" alt="Cisgender women, gender non-conforming, and transgender mountain bikers in the woods">
-    </figure>
+	<a href="/" class="site-title">
+		<svg id="logo" version="1.1" preserveAspectRatio="xMidYMid meet" role="img">
+			<title>Midwest Dirt Legion</title>
+			<use xlink:href="#logo_mdl"></use>
+		</svg>
+	</a>
+	<figure>
+		<picture>
+			<source media="(min-width: 60em) and (orientation:landscape)" srcset="assets/media/images/banner_1080x400.jpg">
+			<source media="(min-width: 40em) and (orientation:landscape)" srcset="assets/media/images/banner_800x300.jpg">
+			<source media="(min-width: 0em) and (orientation:landscape)" srcset="assets/media/images/banner_800x300.jpg">
+			<source media="(min-width: 25em) and (orientation:portrait)" srcset="assets/media/images/banner_600x340.jpg">
+			<source media="(min-width: 0em) and (orientation:portrait)" srcset="assets/media/images/banner_400x260.jpg">
+			<img src="assets/media/images/banner_400x260.jpg" alt="Cisgender women, gender non-conforming, and transgender mountain bikers in the woods">
+		</picture>
+	</figure>
 </header>
