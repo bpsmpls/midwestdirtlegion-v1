@@ -1,5 +1,19 @@
 /* Variables / Mixins
 --------------------------*/
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Asap Regular'), local('Asap-Regular'), url(https://fonts.gstatic.com/s/asap/v9/KFOoCniXp96ayzse5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Asap Bold'), local('Asap-Bold'), url(https://fonts.gstatic.com/s/asap/v9/KFOnCniXp96aw4A79UtvAw.ttf) format('truetype');
+}
 article,
 aside,
 details,
@@ -114,7 +128,7 @@ body {
   --main-text-color: #383733;
   background: var(--main-bg-color);
   color: var(--main-text-color);
-  font: 400 1em/1.5 Helvetica, sans-serif;
+  font: 400 1em/1.5 'Asap', Helvetica, Arial, sans-serif;
 }
 a {
   text-decoration: none;
