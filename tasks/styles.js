@@ -6,6 +6,7 @@
 
 import autoprefix from 'autoprefix';
 import browserSync from 'browser-sync';
+import chmod from 'gulp-chmod';
 import cleanCSS from 'gulp-clean-css';
 import gulp from 'gulp';
 import gulpIf from 'gulp-if';
@@ -39,6 +40,7 @@ function buildStyles() {
             mediaMerging: false,
         })))
         .pipe(gulpIf(process.env.SOURCE_MAPS === 'true', sourcemaps.write('./')))
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(`${process.env.DIRECTORY_DEST}/assets/styles/`))
         .on('end', notify.onLog('STYLES: rebuild complete'))
         .on('end', browser.reload);

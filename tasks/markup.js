@@ -4,6 +4,7 @@
  * @usage gulp markup
  */
 
+import chmod from 'gulp-chmod';
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
 import notify from './notify';
@@ -51,6 +52,7 @@ function buildMarkup() {
             path: 'src/templates/',
         }))
         .pipe(strip.html())
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(process.env.DIRECTORY_DEST))
         .on('end', notify.onLog('MARKUP: rebuild complete'))
         .on('end', browser.reload);

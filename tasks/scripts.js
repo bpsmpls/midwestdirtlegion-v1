@@ -8,6 +8,7 @@
 import buffer from 'vinyl-buffer';
 import browserify from 'browserify';
 import browserSync from 'browser-sync';
+import chmod from 'gulp-chmod';
 import gulp from 'gulp';
 import gulpIf from 'gulp-if';
 import notify from './notify';
@@ -60,6 +61,7 @@ function onUpdate(bundler) {
         .pipe(gulpIf(process.env.SOURCE_MAPS  === 'true', sourcemaps.init({ loadMaps: true })))
         .pipe(gulpIf(process.env.MINIFY === 'true', uglify()))
         .pipe(gulpIf(process.env.SOURCE_MAPS === 'true', sourcemaps.write('./')))
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(`${process.env.DIRECTORY_DEST}/assets/scripts/`))
         .on('end', browser.reload);
 }

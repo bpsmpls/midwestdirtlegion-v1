@@ -10,6 +10,7 @@
  * @usage gulp optimize
  */
 
+import chmod from 'gulp-chmod';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 
@@ -28,5 +29,6 @@ export default function optimize() {
                 ],
             }),
         ]))
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(`${process.env.DIRECTORY_DEST}/assets/media/images/`));
 }
