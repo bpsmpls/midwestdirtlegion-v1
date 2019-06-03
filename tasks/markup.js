@@ -4,14 +4,13 @@
  * @usage gulp markup
  */
 
-/* eslint-disable camelcase, no-param-reassign */
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
 import notify from './notify';
-import prettify from 'gulp-prettify';
-import strip from 'gulp-strip-comments';
 import nunjucks from 'gulp-nunjucks';
 import nunjucksRender from 'gulp-nunjucks-render';
+import prettify from 'gulp-prettify';
+import strip from 'gulp-strip-comments';
 
 function watchMarkup() {
     const src = [
@@ -31,9 +30,6 @@ function buildMarkup() {
         `${process.env.DIRECTORY_SRC}/**/*.njk`,
         `!${process.env.DIRECTORY_SRC}/assets/**`,
         `!${process.env.DIRECTORY_SRC}/templates/**`,
-        `!${process.env.DIRECTORY_SRC}/music/**`,
-        `!${process.env.DIRECTORY_SRC}/video/**`,
-        `!${process.env.DIRECTORY_SRC}/web/**`,
     ];
 
     return gulp
