@@ -4355,7 +4355,7 @@ gulp-if@2.0.2:
     ternary-stream "^2.0.1"
     through2 "^2.0.1"
 
-gulp-imagemin@4.1.0:
+gulp-imagemin@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/gulp-imagemin/-/gulp-imagemin-4.1.0.tgz#5ce347f1d1706fed3cc8f1777ca9094a583b50b7"
   integrity sha512-6nWkrMNY5ub+34+DwlgQdWg21Z4DWAOARLpnyuZ773pGPJrfiyQrkOzdz9DgQSGBQjU1zuw6gd+9clLi6eicuw==
@@ -4393,16 +4393,16 @@ gulp-match@^1.0.3:
   dependencies:
     minimatch "^3.0.3"
 
-gulp-nunjucks-render@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/gulp-nunjucks-render/-/gulp-nunjucks-render-2.2.2.tgz#5958b2cf0f0501e93779d2d5646ebd6587c924ff"
-  integrity sha512-L4BiPLm5MSDhBmG+qJ13aNBcyqdI9Ligz9tFqh7R+ZyYK0Gi7pCUYoiWXxY2yFCFHUkQE4UbxYFdzR5A6MKPRQ==
+gulp-nunjucks-render@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gulp-nunjucks-render/-/gulp-nunjucks-render-2.2.3.tgz#e42b5d8e107a9ac56aa900c2def00003e06e8990"
+  integrity sha512-YHrmwiwPw2DN16WJVj8S2tgUanB1ssZE8e5rRF6rH1T41mhO7r59iAqw92Yz5WSZXYB9G+uYXDTCODgixYPIRw==
   dependencies:
-    lodash "^3.10.0"
-    nunjucks "^3.0.0"
-    plugin-error "^0.1.2"
+    lodash "^4.17.11"
+    nunjucks "^3.1.2"
+    plugin-error "^1.0.1"
     replace-ext "^1.0.0"
-    through2 "~0.4.0"
+    through2 "^2.0.3"
 
 gulp-nunjucks@4.0.0:
   version "4.0.0"
@@ -6152,11 +6152,6 @@ lodash.values@~2.4.1:
   dependencies:
     lodash.keys "~2.4.1"
 
-lodash@^3.10.0:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-  integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
-
 lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.3.0:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
@@ -6820,7 +6815,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nunjucks@^3.0.0:
+nunjucks@^3.0.0, nunjucks@^3.1.2:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-3.2.0.tgz#53e95f43c9555e822e8950008a201b1002d49933"
   integrity sha512-YS/qEQ6N7qCnUdm6EoYRBfJUdWNT0PpKbbRnogV2XyXbBm2STIP1O6yrdZHgwMVK7fIYUx7i8+yatEixnXSB1w==
